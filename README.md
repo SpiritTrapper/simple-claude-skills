@@ -32,23 +32,23 @@ cd /path/to/your/project
 mkdir -p .claude/skills
 
 # Symlink (live updates from this repo)
-ln -s "./dry"               .claude/skills/dry-principle
-ln -s "./kiss"              .claude/skills/kiss-principle
-ln -s "./solid"             .claude/skills/solid-principles
-ln -s "./strict_types"      .claude/skills/strict-types
-ln -s "./no_useless_tests"  .claude/skills/no-useless-tests
-ln -s "./packages_versions" .claude/skills/packages-versions-latest
+ln -s "../simple-claude-skills/dry"               .claude/skills/dry-principle
+ln -s "../simple-claude-skills/kiss"              .claude/skills/kiss-principle
+ln -s "../simple-claude-skills/solid"             .claude/skills/solid-principles
+ln -s "../simple-claude-skills/strict_types"      .claude/skills/strict-types
+ln -s "../simple-claude-skills/no_useless_tests"  .claude/skills/no-useless-tests
+ln -s "../simple-claude-skills/packages_versions" .claude/skills/packages-versions-latest
 ```
 
 Or copy:
 
 ```bash
-cp -r "./dry"               .claude/skills/dry-principle
-cp -r "./kiss"              .claude/skills/kiss-principle
-cp -r "./solid"             .claude/skills/solid-principles
-cp -r "./strict_types"      .claude/skills/strict-types
-cp -r "./no_useless_tests"  .claude/skills/no-useless-tests
-cp -r "./packages_versions" .claude/skills/packages-versions-latest
+cp -r "../simple-claude-skills/dry"               .claude/skills/dry-principle
+cp -r "../simple-claude-skills/kiss"              .claude/skills/kiss-principle
+cp -r "../simple-claude-skills/solid"             .claude/skills/solid-principles
+cp -r "../simple-claude-skills/strict_types"      .claude/skills/strict-types
+cp -r "../simple-claude-skills/no_useless_tests"  .claude/skills/no-useless-tests
+cp -r "../simple-claude-skills/packages_versions" .claude/skills/packages-versions-latest
 ```
 
 Folder names under `.claude/skills/` should match each skill's `name:` field. Restart Claude Code after install so the new skills are indexed.
