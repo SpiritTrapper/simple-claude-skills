@@ -32,23 +32,23 @@ cd /path/to/your/project
 mkdir -p .claude/skills
 
 # Symlink (live updates from this repo)
-ln -s "/home/bodhi/Documents/Claude Skills/dry"               .claude/skills/dry-principle
-ln -s "/home/bodhi/Documents/Claude Skills/kiss"              .claude/skills/kiss-principle
-ln -s "/home/bodhi/Documents/Claude Skills/solid"             .claude/skills/solid-principles
-ln -s "/home/bodhi/Documents/Claude Skills/strict_types"      .claude/skills/strict-types
-ln -s "/home/bodhi/Documents/Claude Skills/no_useless_tests"  .claude/skills/no-useless-tests
-ln -s "/home/bodhi/Documents/Claude Skills/packages_versions" .claude/skills/packages-versions-latest
+ln -s "./dry"               .claude/skills/dry-principle
+ln -s "./kiss"              .claude/skills/kiss-principle
+ln -s "./solid"             .claude/skills/solid-principles
+ln -s "./strict_types"      .claude/skills/strict-types
+ln -s "./no_useless_tests"  .claude/skills/no-useless-tests
+ln -s "./packages_versions" .claude/skills/packages-versions-latest
 ```
 
 Or copy:
 
 ```bash
-cp -r "/home/bodhi/Documents/Claude Skills/dry"               .claude/skills/dry-principle
-cp -r "/home/bodhi/Documents/Claude Skills/kiss"              .claude/skills/kiss-principle
-cp -r "/home/bodhi/Documents/Claude Skills/solid"             .claude/skills/solid-principles
-cp -r "/home/bodhi/Documents/Claude Skills/strict_types"      .claude/skills/strict-types
-cp -r "/home/bodhi/Documents/Claude Skills/no_useless_tests"  .claude/skills/no-useless-tests
-cp -r "/home/bodhi/Documents/Claude Skills/packages_versions" .claude/skills/packages-versions-latest
+cp -r "./dry"               .claude/skills/dry-principle
+cp -r "./kiss"              .claude/skills/kiss-principle
+cp -r "./solid"             .claude/skills/solid-principles
+cp -r "./strict_types"      .claude/skills/strict-types
+cp -r "./no_useless_tests"  .claude/skills/no-useless-tests
+cp -r "./packages_versions" .claude/skills/packages-versions-latest
 ```
 
 Folder names under `.claude/skills/` should match each skill's `name:` field. Restart Claude Code after install so the new skills are indexed.
@@ -68,7 +68,7 @@ for pair in \
   "packages_versions:packages-versions-latest"; do
   src="${pair%%:*}"
   dst="${pair##*:}"
-  ln -sf "/home/bodhi/Documents/Claude Skills/$src" "$HOME/.claude/skills/$dst"
+  ln -sf "./$src" "$HOME/.claude/skills/$dst"
 done
 ```
 
