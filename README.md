@@ -43,6 +43,7 @@ ln -s "../simple-claude-skills/packages_versions" .claude/skills/packages-versio
 Or copy:
 
 ```bash
+mkdir -p .claude/skills
 cp -r "../simple-claude-skills/dry"               .claude/skills/dry-principle
 cp -r "../simple-claude-skills/kiss"              .claude/skills/kiss-principle
 cp -r "../simple-claude-skills/solid"             .claude/skills/solid-principles
